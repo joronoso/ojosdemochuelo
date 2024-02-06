@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "openai": "^4.26.1",
+    "tiktoken": "^1.0.13"
+  },
+  "name": "ojosdemochuelo.net",
+  "version": "1.0.0",
+  "description": "Contenidos de ojosdemochuelo.net",
+  "keywords": [
+    "chatbot",
+    "OpenAI",
+    "node"
+  ],
+  "author": "mochuelo"
+}

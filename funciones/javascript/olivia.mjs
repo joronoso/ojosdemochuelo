@@ -130,7 +130,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let cliente = new ClienteGemini("gemini-1.0-pro", fs.readFileSync("olivia.md", "utf8"), 2);
+let cliente = new ClienteGemini("gemini-1.0-pro", fs.readFileSync("olivia.md", "utf8"));
 let texto_user;
 while (texto_user = (await rl.question('¿Qué le quieres decir a Olivia?\n> ')).trim()) {
     console.log(await cliente.chat(texto_user));

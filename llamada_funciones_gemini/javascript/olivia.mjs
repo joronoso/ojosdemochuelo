@@ -110,9 +110,9 @@ class ClienteGemini {
     async chat(mensajeUsuario) {
         const respuesta = await this.sesionChat.sendMessage(mensajeUsuario);
         let mensajeModelo;
-        if (respuesta.response.functionCall()) {
-            const fc = respuesta.response.functionCall();
-            console.log("-- function call: " + fc.name); // Para tener visibilidad de las llamadas que se producen
+        if (respuesta.response.functionCalls()) {
+            const fc = respuesta.response.functionCalls()[0];
+            console.log("-- function call: " + JSON.stringify(fc)); // Para tener visibilidad de las llamadas que se producen
             if (fc.name === "listarRecetas") {
                 mensajeModelo = await this._chat(fc.name, listarRecetas());
             } else if (fc.name === "guardarReceta") {

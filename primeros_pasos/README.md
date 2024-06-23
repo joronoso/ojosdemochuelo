@@ -1,4 +1,4 @@
-<img src="./logo.png" alt="logo" width="200"/>
+<img src="../logo.png" alt="logo" width="200"/>
 
 # [Primeros pasos con la API de OpenAI](https://ojosdemochuelo.net/primeros-pasos/)
 

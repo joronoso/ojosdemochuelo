@@ -2,4 +2,4 @@
 
 # Ojos de Mochuelo
 
-Este repositorio contiene el código de los ejemplos presentados en el blog [Ojos de Mochuelo](https://ojosdemochuelo.net).
+Este repositorio contiene el código de los ejemplos presentados en el [blog de IA Ojos de Mochuelo](https://ojosdemochuelo.net).

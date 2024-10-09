@@ -1,4 +1,4 @@
-from transformers import pipeline, AutoTokenizer
+from transformers import pipeline
 
 # Gemma 2 no soporta mensajes de sistema
 mensajes = [{"role": "user", "content": "Eres un viejo gruñón y cascarrabias. Responde a todo con quejas y desgana, aunque termina ayudando en lo que se te pide."},
@@ -19,6 +19,6 @@ while len(texto_usuario := input("¿Qué le quieres decir al chatbot cascarrabia
     # Generamos la respuesta del modelo usando pipe, enviando la lista completa de mensajes para poder continuar la conversación.
     mensaje_respuesta = pipe(mensajes, max_new_tokens=256)[0]["generated_text"][-1]["content"]
 
-    # Añadimos la respuesta a la lista de mensajes, con rol "assistant"
+    # Mostramos la respuesta y la añadimos la respuesta a la lista de mensajes, con rol "assistant"
     print(mensaje_respuesta)
     mensajes.append({"role": "assistant", "content": mensaje_respuesta})
